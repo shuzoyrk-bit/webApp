@@ -1,0 +1,62 @@
+/* ==========================================================================
+   🎨 フレームワーク風（モダンUI仕様）デザイン調整
+   ========================================================================== */
+
+.input {
+  width: 100%;
+  padding: 10px 14px;         /* 上下を少し削り、左右にゆとりを持たせてスタイリッシュに */
+  margin-bottom: 12px;
+  border: 1px solid #e2e8f0;   /* 強い#cccから、モダンUI定番の柔らかいニュアンスグレー（Slate系）へ */
+  border-radius: 6px;          /* 丸みをほんの少しシャープ(8px→6px)にして今っぽく */
+  box-sizing: border-box;
+  font-size: 0.95rem;          /* わずかに小さくしてスマートな印象に */
+  color: #0f172a;              /* 真っ黒ではなく、深いネイビーブラック */
+  background-color: #ffffff;
+  transition: all 0.2s ease-in-out; /* 変化を滑らかに */
+}
+
+/* フォーカス時（入力中）のチープな黒枠線を、美しいインディゴブルーに */
+.input:focus {
+  outline: none;
+  border-color: #3b82f6;       /* Tailwindのblue-500相当 */
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15); /* 綺麗な外枠の光 */
+}
+
+/* プレースホルダー（薄文字）も上品な色に */
+.input::placeholder {
+  color: #94a3b8;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 8px;          /* 丸みを12pxから8pxに落として、引き締まった都会的な印象に */
+  padding: 16px;               /* スマホでも見栄えがするよう、余白を16pxから20pxに広げてゆとりを確保 */
+  border: 1px solid #f1f5f9;   /* 枠線をさらに淡く溶け込む色に */
+  
+  /* ドロップシャドウを「ぼんやりした黒」から「透明感のあるモダンなレイヤー影」に変更 */
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 
+              0 1px 2px -1px rgba(0, 0, 0, 0.05),
+              0 4px 6px -1px rgba(0, 0, 0, 0.02);
+  
+  margin-bottom: 16px;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px; /* コンテンツとの間隔を少し広げて、圧迫感を解消 */
+  flex-wrap: wrap;
+}
+
+/* ヘッダー内のタイトル文字も、フォントウェイトと色を調整して綺麗に */
+.header h3 {
+  font-size: 1.25rem;
+  text-align: center;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+}

@@ -1,0 +1,65 @@
+.pickerContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: white;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.wheelWrapper {
+  display: flex;
+  justify-content: center;
+  height: 120px; /* ウィンドウに収まるよう高さを抑える */
+  overflow: hidden;
+  position: relative;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.selectionOverlay {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 34px;
+  background: rgba(0, 0, 0, 0.05);
+  transform: translateY(-50%);
+  pointer-events: none;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.column {
+  flex: 1;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  height: 100%;
+  scrollbar-width: none; /* Firefox用 */
+}
+
+.column::-webkit-scrollbar {
+  display: none; /* Chrome/Safari用 */
+}
+
+.timeItem {
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #999;
+  scroll-snap-align: center;
+}
+
+/* 上下に余白を作るためのスペーサー */
+.spacer {
+  height: 43px;
+}
